@@ -11,7 +11,7 @@ CREATE TABLE Schedule (
     discipline_id  INTEGER NOT NULL,
     day_of_week    VARCHAR(15) NOT NULL,
     lesson_number  INTEGER NOT NULL,
-    CONSTRAINT pk_schedule PRIMARY KEY (group_number, lab_number, discipline_id, day_of_week, lesson_number),
+    CONSTRAINT pk_schedule PRIMARY KEY (group_number, discipline_id, lesson_number),
     CONSTRAINT fk_schedule_discipline
         FOREIGN KEY (discipline_id)
         REFERENCES Disciplines(discipline_id)
